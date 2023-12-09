@@ -1,39 +1,18 @@
-from langchain.prompts.example_selector import LengthBasedExampleSelector
-from langchain.prompts import FewShotPromptTemplate, PromptTemplate
-
-# create our examples
-examples = [
-    {"word": "happy", "antonym": "sad"},
-    {"word": "tall", "antonym": "short"},
-    {"word": "energetic", "antonym": "lethargic"},
-    {"word": "sunny", "antonym": "gloomy"},
-    {"word": "windy", "antonym": "calm"},
-]
-
-#create an example template
-example_template = """
-Word: {word}
-Antonym: {antonym}
-"""
-
-# create a prompt example from above template
-example_prompt = PromptTemplate(
-    input_variables=["word", "antonym"],
-    template=example_template
-)
-
-
 from langchain.prompts.example_selector import SemanticSimilarityExampleSelector
-from langchain.vectorstores import deeplake
+from langchain.vectorstores import DeepLake
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.prompts import FewShotPromptTemplate, PromptTemplate
+from langchain.llms import Cohere
+
 import os
-from dotenv import load_env
-load_dotenv() 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 apikey = os.getenv("COHERE_API_KEY")
 deeplake_token = os.getenv("ACTIVELOOP_TOKEN")
 os.environ["ACTIVELOOP_TOKEN"] = deeplake_token
+
 
 # Create a PromptTemplate
 example_prompt = PromptTemplate(
@@ -52,8 +31,8 @@ examples = [
 
 # create Deep Lake dataset
 # TODO: use your organization id here.  (by default, org id is your username)
-my_activeloop_org_id = "<YOUR-ACTIVELOOP-ORG-ID>" 
-my_activeloop_dataset_name = "langchain_course_fewshot_selector"
+my_activeloop_org_id = "priyankasap92" 
+my_activeloop_dataset_name = "langchain_fewshot_selector"
 dataset_path = f"hub://{my_activeloop_org_id}/{my_activeloop_dataset_name}"
 db = DeepLake(dataset_path=dataset_path)
 
