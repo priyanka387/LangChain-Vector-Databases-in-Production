@@ -27,9 +27,3 @@ chain = LLMChain(llm=chat, prompt=chat_prompt)
 response = chain.run("I love programming.")
 print(response)
 
-
-
-
-
-
-

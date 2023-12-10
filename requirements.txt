@@ -15,4 +15,5 @@ newspaper3k
 ##chatcohere
 pypdf
 chromadb
+pyvis
 #gradio

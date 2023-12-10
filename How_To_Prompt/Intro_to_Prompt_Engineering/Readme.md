@@ -1,4 +1,4 @@
-# ** Intro to Prompt Engineering: Tips and Tricks**
+# **Intro to Prompt Engineering: Tips and Tricks**
 
 ## **Introduction**
 Prompt engineering is a relatively new discipline that involves developing and optimizing prompts to use language models for various applications and research topics efficiently. It helps to understand the capabilities and limitations of LLMs better and is essential for many NLP tasks. We will provide practical examples to demonstrate the difference between good and bad prompts, helping you to understand the nuances of prompt engineering better.

@@ -115,6 +115,7 @@ __pypackages__/
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
+deeplake
 
 # SageMath parsed files
 *.sage.py
@@ -152,6 +153,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+
+
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can

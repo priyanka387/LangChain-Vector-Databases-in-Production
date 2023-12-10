@@ -1,12 +1,11 @@
 from langchain.prompts.example_selector import SemanticSimilarityExampleSelector
 from langchain.vectorstores import DeepLake
-from langchain.embeddings import OpenAIEmbeddings
+from langchain.embeddings import CohereEmbeddings
 from langchain.prompts import FewShotPromptTemplate, PromptTemplate
 from langchain.llms import Cohere
 
 import os
 from dotenv import load_dotenv
-
 load_dotenv()
 
 apikey = os.getenv("COHERE_API_KEY")
@@ -30,14 +29,16 @@ examples = [
 ]
 
 # create Deep Lake dataset
-# TODO: use your organization id here.  (by default, org id is your username)
-my_activeloop_org_id = "priyankasap92" 
+my_activeloop_org_id = "priyankapathak222" 
 my_activeloop_dataset_name = "langchain_fewshot_selector"
 dataset_path = f"hub://{my_activeloop_org_id}/{my_activeloop_dataset_name}"
 db = DeepLake(dataset_path=dataset_path)
 
 # Embedding function
-embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
+embeddings = CohereEmbeddings(
+    cohere_api_key=apikey,
+    model="embed-english-light-v2.0"
+)
 
 # Instantiate SemanticSimilarityExampleSelector using the examples
 example_selector = SemanticSimilarityExampleSelector.from_examples(
