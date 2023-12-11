@@ -12,8 +12,14 @@ cohere
 google-api-python-client
 googlesearch-python
 newspaper3k
-##chatcohere
+google-generativeai
+unstructured
+SeleniumURLLoader
 pypdf
 chromadb
 pyvis
+chromium
+libmagic
+python-magic
+python-magic-bin
 #gradio
