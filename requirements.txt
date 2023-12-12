@@ -22,4 +22,8 @@ chromium
 libmagic
 python-magic
 python-magic-bin
+sklearn
+scipy
+numpy
+sentence-transformer
 #gradio

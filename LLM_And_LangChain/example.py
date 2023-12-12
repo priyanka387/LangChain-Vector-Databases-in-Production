@@ -54,7 +54,7 @@ embeddings = CohereEmbeddings(
 
 # # create Deep Lake dataset
 
-my_activeloop_org_id = "abduljaweed"
+my_activeloop_org_id = "priyankpathak222"
 my_activeloop_dataset_name = "margdarshan_qa_chatbot_v1"
 dataset_path = f"hub://{my_activeloop_org_id}/{my_activeloop_dataset_name}"
 db = DeepLake(dataset_path=dataset_path, embedding_function=embeddings)
