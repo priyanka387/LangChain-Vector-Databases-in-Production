@@ -27,4 +27,6 @@ scipy
 numpy
 sentence-transformer
 apify-client
+yt_dlp
+openai-whisper
 #gradio
