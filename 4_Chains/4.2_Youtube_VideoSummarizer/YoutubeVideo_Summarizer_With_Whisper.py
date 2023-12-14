@@ -24,3 +24,5 @@ def download_mp4_from_youtube(url):
 url = "https://www.youtube.com/watch?v=mBjPyte2ZZo"
 download_mp4_from_youtube(url)
 
+import whisper
+model = whisper.load_model(base)

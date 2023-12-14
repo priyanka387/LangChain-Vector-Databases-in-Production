@@ -6,7 +6,7 @@ selenium==4.15.2
 huggingface
 newspaper3k
 python-dotenv
-streamlit
+streamlit==1.23.1
 transformers
 cohere
 google-api-python-client
@@ -29,4 +29,8 @@ sentence-transformer
 apify-client
 yt_dlp
 openai-whisper
+elevenlabs==0.2.18
+beautifulsoup4==4.11.2
+audio-recorder-streamlit==0.0.8
+streamlit-chat==0.0.2.2
 #gradio
